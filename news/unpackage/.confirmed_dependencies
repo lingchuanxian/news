@@ -1,0 +1,53 @@
+{
+  "index.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "index.js",
+      "img/logo.png",
+      "css/style.css",
+      "page/home.html"
+    ],
+    "refer": [
+      "detail.html",
+      "page/second.html",
+      "page/four.html",
+      "page/third.html"
+    ]
+  },
+  "detail.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/mui.ttf"
+    ],
+    "refer": []
+  },
+  "page/second.html": {
+    "resources": [
+      "js/second.js",
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "page/four.html": {
+    "resources": [
+      "img/logo.png",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css"
+    ],
+    "refer": []
+  },
+  "page/home.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  }
+}

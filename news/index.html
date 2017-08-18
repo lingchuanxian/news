@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+
+	<body>
+		<nav class="mui-bar mui-bar-tab" id="nav">
+			<a class="mui-tab-item mui-active" id="home">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item" id="second">
+				<span class="mui-icon mui-icon-weixin"></span>
+				<span class="mui-tab-label">精选</span>
+			</a>
+			<a class="mui-tab-item" id="third">
+				<span class="mui-icon mui-icon-contact"></span>
+				<span class="mui-tab-label">通讯录</span>
+			</a>
+			<a class="mui-tab-item" id="four">
+				<span class="mui-icon mui-icon-gear"></span>
+				<span class="mui-tab-label">设置</span>
+			</a>
+		</nav>
+		<script type="text/javascript">
+			mui.init({
+				subpages: [ //先加载首页  
+					{
+						url: 'page/home.html',
+						id: 'home',
+						styles: {
+							top: '0px',
+							bottom: '60px'
+						}
+					}
+				],
+				preloadPages: [ //缓存其他页面  
+					{
+						url: 'page/second.html',
+						id: 'second',
+						styles: {
+							top: '0px',
+							bottom: '60px'
+						}
+					},
+					{
+						url: 'page/third.html',
+						id: 'third',
+						styles: {
+							top: '0px',
+							bottom: '60px'
+						}
+					},
+					{
+						url: 'page/four.html',
+						id: 'four',
+						styles: {
+							top: '0px',
+							bottom: '60px'
+						}
+					}
+				]
+			});
+			mui.plusReady(function() {
+				var winAll = plus.webview.all(); //获取所有窗体  
+				var a1, a2, a3, a4;
+				mui("#nav").on("tap", "#home", function() { //点击触发   
+					a1 = plus.webview.getWebviewById("home");
+					a1.show()
+					a2.hide() //这一步必须有  
+					a3.hide() //这一步必须有  
+					a4.hide()
+				})
+				mui("#nav").on("tap", "#second", function() { //点击触发  
+					a2 = plus.webview.getWebviewById("second");
+					a2.show();
+				});
+				mui("#nav").on("tap", "#third", function() { //点击触发  
+					a3 = plus.webview.getWebviewById("third");
+					a3.show();
+				});
+				mui("#nav").on("tap", "#four", function() { //点击触发  
+					a4 = plus.webview.getWebviewById("four");
+					a4.show();
+				});
+			});
+		</script>
+	</body>
+
+</html>
